@@ -1,0 +1,28 @@
+THOUGHTS ABOUT BUILDINGPLANS
+
+Buildingplans are for making big multiblock structures with one type of block that is
+instance of BlockStruct -> BlockContainer. The Multiblock will have to adapt to it's new
+form. The Buildingplans wont handle that kind of advancment. The Buildingplans will set
+the masterblock.
+
+A buildingplan is a BasePlan and contains only a array and is 5x5x5.
+
+- Player creates EntityBuilder with sertent modifiers that makes it know what to create.
+- Player places EntityBuilder on ground and right clicks on it.
+- EntityBuilder is removed and replaced with a BlockCocoon(Master) and TileEntityCocoon that both gets the
+  infromation needed for the building and the genetics of the builder. Information = BuildPlan & Building to go there.
+- The Cocoon fills the BuildPlan space with BlockCocoons with diffrent metadata all pointing to the masterblock.
+  If it has the biomass for it.
+- After filling there will go some time.
+- Cocoon replaces every block it has placed with requierd buildingblocks. 
+
+BasePlan contains...
+A priority array in what order the cocoon blocks should be placed and how the building will look.
+
+TileEntityBaseStructure... (?)
+Replaces all the cocoon TileEntitys and Blocks with it own block.
+
+* - BaseArrays.AnyArray -> BasePlan
+
+EntityBuilder - Genetics, BasePlan, BlockStruct /Master -> TileEntityCocoon
+TileEntityCocoon - Genetics /Master -> TileEntityBaseStructure

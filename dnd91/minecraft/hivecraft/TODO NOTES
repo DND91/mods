@@ -1,0 +1,27 @@
+TODO NOTES
+
+- Fix crafting for Odorem Glandem and the two upgrades. Dump to/Pick up.
+- Fix knowledge & page for Odorem Glandem and the two upgrades. Dump to/Pick up.
+
+- NBTTagCompound genetics -> Genetics genetics that holds the old NBTTagCompound
+- Genetics only hold the values diffrent to the genpool plus familyID and coloration
+- Genpool contains the standard of the family in question, models, textures, abilites, makes it more easier to add a new family
+
+
+- Start thinking on breading and crossing
+
+- Add a class that holds the end information about a family
+- Genetics is the changes from the standard end information.
+
+- Måste kunna binda en familj till olika hatchlings och byggnader
+via IFamily
+
+- Lägga in hatchlings i systemet
+    t.ex. ArrayList<Class> ID -> Class
+
+- Editera om spawner recepie delen! Så att man kan lägga in recept 
+    som kommer ge en hatchling med yrke och inriktning.
+    t.ex. HashMap<String, HashMap<String, Integer>> (String, String) 
+
+- Editera building systemet så att man lätt kan lägga till nya byggnader
+  samt specificera deras typ t.ex. HashMap<String, ArrayList<BlockPlan[][][]>>???
